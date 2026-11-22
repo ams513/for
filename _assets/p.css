@@ -1,0 +1,45 @@
+:root{--bg:#000;--fg:#E9EDF2;--dim:#8F99A6;--acc:#9CC4FF;--line:rgba(233,237,242,.16)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#000;color:var(--fg);font:400 17px/1.6 "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;font-variant-numeric:tabular-nums}
+main{max-width:640px;margin:0 auto;padding:28px 20px 64px}
+.wm{font:300 15px/1 Bahnschrift,"Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;letter-spacing:.42em;text-transform:uppercase;margin:0;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.wm span{display:inline-block;margin-right:-.42em}
+.tag{display:inline-block;margin:22px 0 0;color:var(--dim);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.sample{margin:18px 0 0;padding:8px 12px;border:1px solid var(--line);color:var(--dim);font-size:13px}
+h1{font:300 clamp(28px,8vw,44px)/1.12 Bahnschrift,"Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin:12px 0 20px;font-weight:300}
+h2{font:300 13px/1.4 Bahnschrift,"Segoe UI",system-ui,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin:44px 0 14px;font-weight:300}
+h2 b{font-weight:300;color:var(--acc);margin-right:1.4em}
+p{margin:0 0 14px}
+.lead{font-size:20px;line-height:1.5;margin-bottom:26px}
+.band{position:relative;margin:26px -20px 4px;aspect-ratio:16/9;background:#000;border-top:1px solid var(--acc);-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent)}
+.band video,.band img{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:26px 0 4px;border-top:1px solid var(--acc);padding-top:6px}
+.shots img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
+.cap{color:var(--dim);font-size:13px;margin:6px 0 0}
+.lines{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.lines li{padding:13px 0;border-bottom:1px solid var(--line)}
+.lines strong{font-weight:600}
+.pay p{color:#cdd3db;font-size:15.5px;margin-bottom:11px}
+.pay strong{color:var(--fg);font-weight:600}
+.btns{display:flex;flex-direction:column;gap:12px;margin:36px 0 10px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border:1px solid var(--line);color:var(--fg);text-decoration:none;font:600 14px/1 "Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.btn.p{border-color:var(--acc);box-shadow:0 0 18px rgba(156,196,255,.14)}
+.btn:hover{border-color:var(--acc)}
+a{color:var(--acc);text-underline-offset:3px}
+a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.out{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:#cdd3db}
+.fine{color:var(--dim);font-size:13px;line-height:1.55;margin-top:26px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--acc)}
+details[open] summary::after{content:"\2212"}
+details p{margin:10px 0 0;color:#cdd3db;font-size:15.5px}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;padding:14px 0 14px 46px;border-bottom:1px solid var(--line);position:relative}
+.steps li:first-child{border-top:1px solid var(--line)}
+.steps li::before{content:counter(s,upper-roman);position:absolute;left:0;top:14px;color:var(--acc);font:300 15px/1.6 Bahnschrift,"Segoe UI",system-ui,sans-serif;letter-spacing:.1em}
+.lad{width:100%;border-collapse:collapse;margin:14px 0 6px}.lad td{padding:9px 0;border-bottom:1px solid var(--line)}.lad td:last-child{text-align:right;font-weight:600;color:var(--fg)}.lad tr:first-child td{border-top:1px solid var(--line)}
+@media (min-width:720px){main{padding-top:48px}.btns{flex-direction:row}.btn{flex:1}.band{margin-left:0;margin-right:0}}
